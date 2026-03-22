@@ -49,4 +49,10 @@ io.on("connection", (socket) => {
 });
 
 // Bind to all LAN interfaces
-app.listen(3001, "0.0.0.0", () => console.log("Socket.IO running on port 3001"));
+// app.listen(3001, "0.0.0.0", () => console.log("Socket.IO running on port 3001"));
+
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
